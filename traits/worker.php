@@ -2,11 +2,11 @@
 
 trait Worker
 {
-   public $shop;
+   public $nome;
    public $vendite;
 
    public function getShop()
    {
-      return "this->shop - this->vendite";
+      return "this->nome - this->vendite";
    }
 }
