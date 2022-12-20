@@ -28,19 +28,56 @@ $prodotti = [
 var_dump($prodotti);
 
 
+
 foreach ($prodotti as $elem) {
     echo '<strong>';
+    echo 'Tipo: ';
     echo get_class($elem);
     echo '</strong>';
     echo '<br>';
+    echo 'Titolo: ';
     echo $elem->nome;
     echo '<br>';
+    echo 'Autore: ';
     echo $elem->autore;
     echo '<br>';
+    echo 'Prezzo: ';
     echo $elem->prezzo;
+    echo ' €';
     echo '<br>';
+    if (get_class($elem) == 'libro') {
+        echo 'Copertina: ';
+        echo $elem->copertina;
+        echo '<br>';
+        echo 'Numero pagine: ';
+        echo $elem->pagine;
+        echo '<br>';
+    };
+    if (get_class($elem) == 'audioLibro') {
+        echo 'Durata: ';
+        echo $elem->durata;
+        echo '<br>';
+        echo 'Piattaforma: ';
+        echo $elem->piattaforma;
+        echo '<br>';
+    };
+    if (get_class($elem) == 'Cd') {
+        echo 'Durata: ';
+        echo $elem->durata;
+        echo '<br>';
+        echo 'Anno: ';
+        echo $elem->anno;
+        echo '<br>';
+    };
+    if (get_class($elem) == 'Dvd') {
+        echo 'Durata: ';
+        echo $elem->time;
+        echo ' min.';
+        echo '<br>';
+    };
     echo '<br>';
 }
+
 
 
 
